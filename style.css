@@ -1,75 +1,288 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+  font-family: "Cabin";
+  background-color: #e3e6e9;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
 }
 
 #tentacles {
-    width: 50px;
+  width: 5rem;
+  display: inline;
+}
+
+.header-img-div {
+  display: flex;
+}
+
+#tentacles,
+.header-text {
+  margin: 0;
+  padding: 0;
+}
+
+.header-search-svg {
+  height: 2rem;
+  margin-right: -0.5rem;
+  float: left;
 }
 
 .header {
-    display: flex;
-    background-color: lightblue;
-    padding: 1%;
-    align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+  margin-bottom: 2.8rem;
+  background-color: black;
+}
+
+.header-text {
+  color: white;
+}
+
+/* header search bar */
+.search-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-search {
+  height: 5rem;
+  width: 5rem;
+  border-style: none;
+  padding: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 0rem;
+  outline: none;
+  border-radius: 2.5rem;
+  transition: all 0.5s ease-in-out;
+  background-color: black;
+  padding-right: 4rem;
+  color: white;
+}
+
+.input-search::placeholder {
+  color: white;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 100;
+}
+
+.btn-search {
+  width: 5rem;
+  height: 5rem;
+  border-style: none;
+  font-size: 2rem;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0rem;
+  color: black;
+  background-color: transparent;
+  pointer-events: painted;
+}
+
+.btn-search:focus {
+  color: white;
+}
+
+.fa-search {
+  color: white;
+}
+
+.input-search:focus + .btn-search + .btn-search:focus {
+  color: white;
+  background-color: transparent;
+}
+
+.btn-search:focus ~ .input-search {
+  width: 30rem;
+  border-radius: 0rem;
+  background-color: transparent;
+  border-bottom: 0.1rem solid #fff;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  color: white;
+}
+
+.input-search:focus {
+  width: 30rem;
+  border-radius: 0rem;
+  background-color: transparent;
+  border-bottom: 0.5rem solid #fff;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  color: white;
+}
+
+/* header */
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 1%;
+  align-items: center;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-top: 3.5rem;
+  font-size: 2rem;
+}
+
+.our-games {
+  margin-bottom: 2rem;
+}
+.welcome-note {
+  font-size: 1.5rem;
+}
+
+.stats-title {
+  font-size: 1.3rem;
 }
 
 .stats-container {
-    display: flex;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 3rem #fff;
+  font-size: 1.6rem;
 }
 
 .stats-card {
-    background-color: #a8b0bc;
-    border-radius: 7px;
-    padding: 1%;
-    margin: 1%;
-    width: 100%;
-    text-align: center;
+  background-color: #acb3bc;
+  border-radius: 0.7rem;
+  padding: 2%;
+  margin: 1%;
+  width: 100%;
+  text-align: center;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
 }
 
-#num-contributions, #total-raised, #num-games {
-    font-size: 50px;
+#num-contributions,
+#total-raised,
+#num-games {
+  font-size: 5rem;
+}
+
+.our-games {
+  font-size: 1.3rem;
 }
 
 #games-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .game-img {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem #ffffff;
 }
 
 .game-card {
-    background-color: #FFFFFF;
-    padding: 1%;
-    margin: 1%;
-    width: 300px;
-    text-align: center;
-    border-radius: 7px;
+  background-color: #ffffff;
+  padding: 1%;
+  margin: 1%;
+  width: 30rem;
+  text-align: center;
+  border-radius: 0.7rem;
 }
 
+.game-card h3 {
+  margin-top: 1.5rem;
+}
+
+.game-card p {
+  margin-top: 1rem;
+}
 .game-card:hover {
-    cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+  cursor: pointer;
+  box-shadow: 0 0 3rem lightblue;
 }
 
 #button-container {
-    text-align: center;
+  text-align: center;
 }
 
 button {
-    font-family: 'Cabin';
-    border: none;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 7px;
+  font-family: "Cabin";
+  border: none;
+  padding: 1%;
+  margin: 1%;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0.5rem #999;
+}
+
+/* error handling */
+.notification {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+}
+
+/* Animation for the notification to fade in and out */
+@keyframes fade {
+  from {
+    opacity: 0;
+    top: 10px;
+  }
+  to {
+    opacity: 1;
+    top: 20px;
+  }
+}
+
+.notification {
+  animation: fade 0.5s ease-in-out;
+}
+
+footer {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+footer ul {
+  font-size: 1.2rem;
+  list-style: none;
+  text-decoration: none;
+}
+
+footer p:nth-child(2) {
+  font-weight: bold;
 }
