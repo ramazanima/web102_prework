@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='assets\sea-monster-crowdfunding-demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./assets/sea-monster-crowdfunding-demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with ScreentoGIF
