@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [1] A search box where users can search for the name of a specific game; error handling and is implemented and the user is guided on next steps for error prevention
-- [2] For better user experience, the page layout is set to center with responsive elements
+- [2] For better user experience, the page layout is set to center with responsive elements and backgroun color, font sizes are customized
 
 ## Video Walkthrough
 
